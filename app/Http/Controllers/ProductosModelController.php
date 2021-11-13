@@ -62,7 +62,7 @@ class ProductosModelController extends Controller
         }
         $produto->img_url = $imganesurl;
         $produto->save();
-        return $produto;
+        return   redirect()->back();
     }
 
     /**
