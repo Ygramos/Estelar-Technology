@@ -48,4 +48,12 @@ class userController extends Controller
 
         //     return $user->toArray();
     }
+    public function logout()
+    {
+        //logout user
+        Auth::logout();
+        // redirect to homepage
+        return  redirect()->route('home.app');
+    }
+
 }

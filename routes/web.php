@@ -29,3 +29,4 @@ Route::get('registrar', [userController::class, 'index'])->name('register');
 Route::post('newUser', [userController::class, 'register'])->name('newUser');
 Route::post('update-product/{id}', [ProductosModelController::class, 'update'])->name('update.Productos');
 Route::post('delete-producto/{id}', [ProductosModelController::class, 'destroy'])->name('delete.productos');
+Route::get('lagout',[userController::class,'logout'])->name('logout');

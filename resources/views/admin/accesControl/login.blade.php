@@ -16,6 +16,30 @@
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    </script>
+    @if ($mensaje = Session::get('error'))
+
+        @if ($mensaje == 'error')
+            <script>
+                Swal.fire(
+                    'Enviado!',
+                    'login inicado!',
+                    'success'
+                )
+            </script>
+            {{$mensaje}}
+        @else
+            <script>
+                Swal.fire(
+                    'Se produjo un error!',
+                    'uups! Vaya al parecer sus credenciales no son correctas ',
+
+                    'error'
+                )
+            </script>
+        @endif
+    @endif
 
     <div class="flex items-center min-h-screen bg-white dark:bg-gray-900">
         <div class="container mx-auto">
